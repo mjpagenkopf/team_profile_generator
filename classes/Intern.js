@@ -4,7 +4,6 @@ class Intern {
         this.id = id;
         this.email = email;
         this.school = school;
-
     }
     getName() {
         return this.name;
@@ -15,11 +14,11 @@ class Intern {
     getEmail() {
         return this.email;
     }
-    getRole() {
-        return "Intern"; //not same value as class Intern
-    }
     getSchool() {
         return this.school;
+    }
+    getRole() {
+        return "Intern"; //not same value as class Intern
     }
 }
 module.exports = Intern;

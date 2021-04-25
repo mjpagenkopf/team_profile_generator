@@ -14,10 +14,12 @@ class Engineer {
     getEmail() {
         return this.email;
     }
-    getRole() {
-        return "Engineer"; //not same value as class Engineer
-    }
     getGithub() {
         return this.github;
     }
+    getRole() {
+        return "Engineer"; 
+    }
 }
+
+module.exports = Engineer; //exports from one file and acquire in another file

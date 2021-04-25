@@ -1,6 +1,7 @@
 const Employee = require('../classes/Employee');
 
-//testing name of Employee
+
+
 test ("test to return the name on the Employee class", () => {
     const name = "Placeholder";
     const newEmp = new Employee(name);
@@ -36,3 +37,7 @@ test ("test to return the getEmail on the Employee class", () => {
     const newEmp = new Employee('Passing Name aka foo', 666, email);
     expect(newEmp.getEmail()).toBe(email);
 })
+//testing getRole of Employee?
+// test ("test to return the getRole on the Employee class", () => {
+
+// })
