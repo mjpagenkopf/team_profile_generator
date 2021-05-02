@@ -1,14 +1,77 @@
-
 const fs = require('fs');
+const inquirer = require('inquirer');
+const generatedTeamPage = require('./dist/generatedTeamPage.js')
 
 
+const info = [{
+    type: 'input',
+    message: 'Enter your name',
+    name: 'name',
+}, {
+    type: 'input',
+    message: 'Enter your email',
+    name: 'email',
+}, {
+    type: 'number',
+    message: 'Enter employee ID',
+    name: 'id',
+}, {
+    type: 'list',
+    name: 'position',
+    message: 'what is your position?',
+    choices: [
+        'Manager',
+        'Engineer',
+        'Intern',
+    ]
+}, {
+    type: 'input',
+    name: 'office number',
+    message: 'Please enter your Office Number',
+    when: (answers) => answers.position === 'Manager',
+}, {
+    type: 'input',
+    name: 'github',
+    message: 'Please enter your GitHub Username',
+    when: (answers) => answers.position === 'Engineer',
+}, {
+    type: 'input',
+    name: 'school',
+    message: 'Please enter your College or University name',
+    when: (answers) => answers.position === 'Intern',
+},
+];
+console.log(info);
 
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log('success');
+        };
+    });
+};
 
+function init() {
+    inquirer
+    .prompt(info)
+    .then((data) => {
+        writeToFile('index.html', generatedTeamPage(data));
+    });
+};
+init();
 
-
-
-
-
+// const employee = new Employee(
+//     (data, (err => {
+//     if (err) {
+//         return console.log(err);
+//     } else {
+//         console.log('success');
+//     }
+// }));
+    
+// employee.getRole();
 
 
 

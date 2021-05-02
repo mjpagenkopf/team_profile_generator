@@ -1,4 +1,4 @@
-const Employee = require('../classes/Employee');
+const Employee = require('../lib/Employee');
 
 
 
@@ -21,14 +21,14 @@ test ("test to return the email on the Employee class", () => {
 })
 //testing getName of Employee
 test ("test to return the getName on the Employee class", () => {
-    const name = "Melvin";
+    const name = "Melvin aka Placeholder";
     const newEmp = new Employee(name);
     expect(newEmp.getName()).toBe(name);
 })
 //testing getId of Employee
 test ("test to return the getId on the Employee class", () => {
     const id = 1234;
-    const newEmp = new Employee('Passing Name aka foo', id);
+    const newEmp = new Employee('Melvin aka Placeholder', id);
     expect(newEmp.getId()).toBe(id);
 })
 //testing getEmail of Employee

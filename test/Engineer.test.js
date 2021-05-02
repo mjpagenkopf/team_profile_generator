@@ -1,5 +1,5 @@
 const { expect } = require('@jest/globals');
-const Engineer = require('../classes/Engineer');
+const Engineer = require('../lib/Engineer');
 
 //testing name of Engineer
 test ("test to return the name on the Engineer class", () => {
@@ -9,7 +9,7 @@ test ("test to return the name on the Engineer class", () => {
 })
 //testing id of Engineer
 test ("test to return the id on the Engineer class", () => {
-    const id = 1234;
+    const id = 666;
     const newEmp = new Engineer('Passing Name aka foo', id);
     expect(newEmp.id).toBe(id);
 })
@@ -21,8 +21,8 @@ test ("test to return the email on the Engineer class", () => {
 })
 //testing github of Engineer
 test ("test to return the github on the Engineer class", () => {
-    const github = undefined;
-    const newEmp = new Engineer(github);
+    const github = 'fartface';
+    const newEmp = new Engineer('Passing Name aka foo', 666, 'placeholder@gmail.com', github);
     expect(newEmp.github).toBe(github);
 })
 //testing getName of Engineer
@@ -33,7 +33,7 @@ test ("test to return the getName on the Engineer class", () => {
 })
 //testing getId of Engineer
 test ("test to return the getId on the Engineer class", () => {
-    const id = 1234;
+    const id = 666;
     const newEmp = new Engineer('Passing Name aka foo', id);
     expect(newEmp.getId()).toBe(id);
 })
@@ -45,8 +45,8 @@ test ("test to return the getEmail on the Engineer class", () => {
 })
 //testing getGithub of Engineer
 test ("test to return the getGithub on the Engineer class", () => {
-    const github = undefined;
-    const newEmp = new Engineer(github);
+    const github = 'fartface';
+    const newEmp = new Engineer('Passing name aka foo', 666, 'placeholder@gmail.com', github);
     expect(newEmp.getGithub()).toBe(github);
 })
 //testing getRole of Employee?
