@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generatedTeamPage = require('./dist/generatedTeamPage.js')
-
+const generatedTeamPage = require('./dist/generatedTeamPage');
+const Employee = require('./lib/Employee');
 
 const info = [{
     type: 'input',
@@ -26,7 +26,7 @@ const info = [{
     ]
 }, {
     type: 'input',
-    name: 'office number',
+    name: 'officeNumber',
     message: 'Please enter your Office Number',
     when: (answers) => answers.position === 'Manager',
 }, {
@@ -44,7 +44,7 @@ const info = [{
 console.log(info);
 
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
+    fs.appendFileSync(fileName, data, (err) => {
         if (err) {
             return console.log(err);
         } else {
@@ -62,16 +62,12 @@ function init() {
 };
 init();
 
-// const employee = new Employee(
-//     (data, (err => {
-//     if (err) {
-//         return console.log(err);
-//     } else {
-//         console.log('success');
-//     }
-// }));
-    
-// employee.getRole();
+
+const employee = new Employee();
+
+employee.getRole();
+
+
 
 
 
