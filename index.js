@@ -1,7 +1,9 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generatedTeamPage = require('./dist/generatedTeamPage');
-const Employee = require('./lib/Employee');
+// const generatedTeamPage = require('./dist/generatedTeamPage');
+const Engineer = require('./lib/Engineer');
+
+let array = [];
 
 const info = [{
     type: 'input',
@@ -41,31 +43,44 @@ const info = [{
     when: (answers) => answers.position === 'Intern',
 },
 ];
-console.log(info);
+// console.log(info);
 
-function writeToFile(fileName, data) {
-    fs.appendFileSync(fileName, data, (err) => {
-        if (err) {
-            return console.log(err);
-        } else {
-            console.log('success');
-        };
-    });
-};
+// function writeToFile(fileName, data) {
+//     fs.appendFileSync(fileName, data, (err) => {
+//         if (err) {
+//             return console.log(err);
+//         } else {
+//             console.log('success');
+//         };
+//     });
+// };
+
+//TO DO: give user option to exit prompt. Keep looping prompt 
+function constructorToArray (data) {
+    
+    switch(data.position) {
+        case 'Engineer': 
+        array.push(new Engineer(data.name, data.id, data.email, data.github))
+        break
+    }
+}
 
 function init() {
     inquirer
     .prompt(info)
     .then((data) => {
-        writeToFile('index.html', generatedTeamPage(data));
+        // console.log(data)
+        var constructorArray = constructorToArray(data)
+        console.log(constructorArray);
+        // writeToFile('index.html', generatedTeamPage(data));
     });
 };
 init();
 
 
-const employee = new Employee();
+// const employee = new Employee();
 
-employee.getRole();
+// employee.getRole();
 
 
 
