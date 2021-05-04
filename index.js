@@ -6,7 +6,7 @@ const path = require("path");
 const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
-const generatedTeamPage = require("./dist/generatedTeamPage.js");//render and ./src/page-template.js
+const generatedTeamPage = require("./src/generatedTeamPage.js");//render and ./src/page-template.js
 const teamMembers = [];
 const idArray = [];
 
@@ -252,7 +252,7 @@ function appMenu() {
 
 appMenu();
 
-const generateHTML = (answers) => {}
+// const generateHTML = (answers) => {}
 
 
 
