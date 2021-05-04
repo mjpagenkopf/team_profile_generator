@@ -235,8 +235,8 @@ function appMenu() {
      idArray.push(answers.internId);
      createTeam();
    });
-   console.log(teamMembers);
-   console.log(idArray);
+  //  console.log(teamMembers);
+  //  console.log(idArray);
  }
  
  
