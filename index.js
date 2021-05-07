@@ -11,7 +11,7 @@ const teamMembers = [];
 const idArray = [];
 
 //function to create team profile site
-function appMenu() {
+// function appMenu() {
 
 //creating array for Manager
  function createManager() {
@@ -245,15 +245,17 @@ function appMenu() {
    if (!fs.existsSync(OUTPUT_DIR)) { 
      fs.mkdirSync(OUTPUT_DIR)
    }
-   fs.writeFileSync(outputPath, generatedTeamPage(teamMembers), "utf-8"); //render
+   fs.writeFileSync(outputPath, generatedTeamPage(teamMembers)); //render
  }
  createManager();
-}
+// }
 
-appMenu();
+// appMenu();
 
 // const generateHTML = (answers) => {}
-
+// module.exports = new Manager;
+// module.exports = new Engineer;
+// module.exports = new Intern;
 
 
 
