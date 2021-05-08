@@ -1,8 +1,6 @@
 # Team Profile Generator
 
---
-
-# Description -
+## Description -
 
 This application allows a manager to create a simple profile page for their team and generate individual profile cards for each team member. I built this app so managers can showcase employees in a professional layout that is easy to control as each profile is created. It eliminates any concerns a manager may have about keeping the profiles consistent in style without concern for complicated code issues. I learned more about how the testing system with jest is set up. I also learned more about controlling the directory with node and separation of concerns. This is still a confusing area of programming so it will take a lot more practice.  
 
@@ -59,6 +57,6 @@ Apache License v2.0
 * Github Username: mpagenkopf
 * Email: pagenkopf.edit@gmail.com
 
-* Link to Screencastify video: [Screencastify](https://drive.google.com/file/d/1851OA2wEchV9Y7gQXW122j1JeTL25qdJ/view)
+* Link to Screencastify video: [Screencastify](https://drive.google.com/file/d/1KPl0ajvaJ1olO8GHj0uiDWckS8lVySTn/view)
 
 * Link to Repository: [Repository](https://github.com/mjpagenkopf/team_profile_generator)
