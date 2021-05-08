@@ -1,5 +1,5 @@
 {
-  "name": "team_profile_gen2",
+  "name": "team_profile_generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,6 +16,7 @@
     "fs": "*",
     "inquirer": "^8.0.0",
     "inquirer-loop": "^0.3.0",
+    "path": "^0.12.7",
     "stack": "^0.1.0",
     "util": "^0.12.3"
   }

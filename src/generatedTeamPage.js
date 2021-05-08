@@ -49,7 +49,7 @@ return html += `</div>
 </html>`
 }
   function managerCard(answers) {
-    console.log(answers);
+    // console.log(answers);
   html += `
   <div class="card border-secondary col-mb-4" style="max-width: 25rem;">
               <div class="card-header" style="font-weight:bolder; background-color:turquoise"><h2>${answers.name}</h2></div>
@@ -96,7 +96,7 @@ function internCard(answers) {
             </div>
 `;
 }
-//
+console.log('success');
 ;
 
 

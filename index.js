@@ -245,7 +245,7 @@ const idArray = [];
    if (!fs.existsSync(OUTPUT_DIR)) { 
      fs.mkdirSync(OUTPUT_DIR)
    }
-   fs.writeFileSync(outputPath, generatedTeamPage(teamMembers)); //render
+   fs.writeFileSync(outputPath, generatedTeamPage(teamMembers));
  }
  createManager();
 // }
